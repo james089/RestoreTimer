@@ -21,6 +21,6 @@ namespace RestoreTimer
     public class p
     {
         public static int warningLevel = 30;                      //Yellow level.
-        public static int dyingLevel = 5;                      //when your set time runs out, your engergy should be very low. red level
+        public static int dyingLevel = 10;                      //when your set time runs out, your engergy should be very low. red level
     }
 }

@@ -41,11 +41,11 @@ namespace RestoreTimer
             {
                 mMode = mode.work;
                 progressRing.Text = "Now working!";
-                decreasePoint();
+                decreaseEngergy();
             }
         }
 
-        private void decreasePoint()
+        private void decreaseEngergy()
         {
             setTime = new TimeSpan(0, 0, 1, 0, 0); //new TimeSpan(0, 0, focusSpanMinues, 0, 0);
             setValue = setTime.Minutes * 60;
@@ -84,6 +84,11 @@ namespace RestoreTimer
             }
             return result;
 
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

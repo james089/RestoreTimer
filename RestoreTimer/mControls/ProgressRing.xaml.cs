@@ -26,8 +26,10 @@ namespace RestoreTimer.mControls
         public ProgressRing()
         {
             ValueProperty = DependencyProperty.Register("Value", typeof(byte), typeof(ProgressRing), new FrameworkPropertyMetadata((byte)0, new PropertyChangedCallback(OnValueChanged)));
-            TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(ProgressRing), new FrameworkPropertyMetadata("-", new PropertyChangedCallback(OnTextChanged)));
+            TextProperty = DependencyProperty.Register("Text", typeof(string), typeof(ProgressRing), new FrameworkPropertyMetadata("", new PropertyChangedCallback(OnTextChanged)));
             InitializeComponent();
+
+            TText.Text = "Click me to start";
         }
 
         public byte Value

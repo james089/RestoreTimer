@@ -54,12 +54,16 @@ c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTim
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\MainWindow.g.cs
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\MoreButton.g.cs
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\CloseButton.g.cs
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\ProgressRing.g.cs
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\App.g.cs
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\GeneratedInternalTypeHelper.g.cs
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer_MarkupCompile.cache
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer_MarkupCompile.lref
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\MainWindow.baml
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\MoreButton.baml
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\CloseButton.baml
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\ProgressRing.baml
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.g.resources
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.Properties.Resources.resources

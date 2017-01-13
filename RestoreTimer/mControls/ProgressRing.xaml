@@ -8,41 +8,40 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="600">
 
-    <Grid>
-        <Ellipse StrokeThickness="10"  Margin="0">
+    <Viewbox>
+        <Border BorderThickness="5" CornerRadius="500">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFDADADA" Offset="0"/>
+                    <GradientStop Color="#FF252525" Offset="1"/>
+                    <GradientStop Color="#FF818181" Offset="0.515"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        <Grid>
+        <Ellipse Stroke="Gray" StrokeThickness="40" Opacity="0.6" Margin="0" Panel.ZIndex="1"/>
+        <Ellipse StrokeThickness="5" Margin="40" Panel.ZIndex="1" >
             <Ellipse.Stroke>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEAEAEA" Offset="0"/>
-                    <GradientStop Color="#FF1D1D1D" Offset="0.926"/>
-                    <GradientStop Color="#FF848484" Offset="0.506"/>
-                </LinearGradientBrush>
-            </Ellipse.Stroke>
-            <Ellipse.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="White" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                    <GradientStop Color="White" Offset="0.5"/>
-                </LinearGradientBrush>
-            </Ellipse.Fill>
-        </Ellipse>
-        <Ellipse Stroke="Gray" StrokeThickness="30" Opacity="0.6" Margin="10"/>
-        <Ellipse StrokeThickness="10" Margin="40" Panel.ZIndex="1" >
-            <Ellipse.Stroke>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF383838" Offset="0"/>
-                    <GradientStop Color="#FFA2A1A1" Offset="1"/>
-                    <GradientStop Color="#FF878787" Offset="0.5"/>
+                    <GradientStop Color="#FF2C2C2C" Offset="0"/>
+                    <GradientStop Color="#FF6E6E6E" Offset="1"/>
+                    <GradientStop Color="#FF646464" Offset="0.866"/>
                 </LinearGradientBrush>
             </Ellipse.Stroke>
         </Ellipse>
-        <ed:Arc x:Name="EllipseFill" Margin="10" ArcThickness="30" StartAngle="0" EndAngle="360" Stretch="None" Stroke="Transparent" StrokeThickness="0" Fill="Green"/>
+        <ed:Arc x:Name="EllipseFill" Panel.ZIndex="2" Margin="0" ArcThickness="40" StartAngle="0" EndAngle="360" Stretch="None" Stroke="Transparent" StrokeThickness="0" Fill="Green">
+                <ed:Arc.Effect>
+                    <BlurEffect Radius="3"/>
+                </ed:Arc.Effect>
+         </ed:Arc>
 
         <Grid Margin="40">
-            <Button x:Name="Btn_center" Click="Btn_center_Click">
+            <Button x:Name="Btn_center" Click="Btn_center_Click" >
                 <Button.Template >
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Viewbox>
-                            <Ellipse x:Name="centerButton" StrokeThickness="200" Fill="Black" >
+                            <Ellipse x:Name="centerButton" StrokeThickness="500" Fill="Black" >
+                                <Ellipse.Effect>
+                                    <BlurEffect Radius="30"/>
+                                </Ellipse.Effect>
                                 <Ellipse.Stroke>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                         <GradientStop Color="#FF7A7A7A" Offset="0"/>
@@ -51,9 +50,8 @@
                                     </LinearGradientBrush>
                                 </Ellipse.Stroke>
                             </Ellipse>
-                        </Viewbox>
-                        
-                        <ControlTemplate.Triggers>
+
+                            <ControlTemplate.Triggers>
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter TargetName="centerButton" Property="Stroke" Value="Black" />
                             </Trigger>
@@ -62,9 +60,13 @@
                 </Button.Template>
             </Button>
 
-            <TextBlock x:Name="TValue" HorizontalAlignment="Center" Margin="0,0,0,80" TextWrapping="Wrap" Text="100%" VerticalAlignment="Bottom" FontSize="48" Foreground="White"/>
-            <TextBlock x:Name="TText" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="-" VerticalAlignment="Top" Foreground="White" FontSize="48"/>
+            <TextBlock x:Name="TValue" HorizontalAlignment="Center" Margin="0,0,0,40" TextWrapping="Wrap" Text="100%" VerticalAlignment="Bottom" FontSize="36" Foreground="White" FontFamily="Segoe UI Light"/>
+            <TextBlock x:Name="TText" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Hello world" VerticalAlignment="Center" Foreground="White" FontSize="48" FontFamily="Segoe UI Light"/>
 
         </Grid>
     </Grid>
+    </Border>
+ </Viewbox>
+  
+    
 </UserControl>
