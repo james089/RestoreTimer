@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
         xmlns:local="clr-namespace:RestoreTimer"
-        xmlns:mControls="clr-namespace:RestoreTimer.mControls" x:Class="RestoreTimer.MainWindow"
+        xmlns:mControls="clr-namespace:RestoreTimer.mControls" x:Name="Window" x:Class="RestoreTimer.MainWindow"
         mc:Ignorable="d"
-        Title="Restore Timer" Height="800" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" MouseDown="Window_MouseDown" Icon="sonyericsson_timer_111px_1135486_easyicon.net.ico">
-    <Border BorderThickness="5" >
+        Title="Restore Timer" Height="800" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Icon="sonyericsson_timer_111px_1135486_easyicon.net.ico" MouseUp="Window_MouseUp">
+    <Border BorderThickness="0" >
         <Border.BorderBrush>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF151515" Offset="0"/>
@@ -16,7 +16,7 @@
                 <GradientStop Color="#FF323232" Offset="0.5"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
-        <Grid>
+        <Grid Margin="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="1*"/>
@@ -30,8 +30,9 @@
             </Grid.Background>
             <mControls:CloseButton x:Name="closeButton" Content="CloseButton" Margin="0,10,10,0" Width="50" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top" Click="closeButton_Click" Opacity="0.8"/>
             <mControls:MoreButton x:Name="moreButton" Content="CloseButton" Width="50" Height="50" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Opacity="0.8"/>
-            <mControls:ProgressRing x:Name="progressRing" Value="100" Margin="30" CenterBtn_clicked="progressRing_CenterBtn_clicked"/>
-            <TextBlock x:Name="TB_time" Grid.Row="1" HorizontalAlignment="Center" Text="Time" VerticalAlignment="Center" FontSize="48" Foreground="White" FontFamily="Segoe WP Light"/>
+            <mControls:ProgressRing x:Name="progressRing" Value="100" Margin="30" CenterBtn_clicked="progressRing_CenterBtn_clicked" Visibility="Hidden"/>
+            <mControls:TimerSelector x:Name="selector" Margin="30" Width="400" Height="400" MouseDown="selector_MouseDown" MouseMove="selector_MouseMove"/>
+            <Label x:Name="TB_time" Grid.Row="1" Content="Time" FontSize="48" Foreground="White" FontFamily="Segoe WP Light" MouseDown="TB_time_MouseDown" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
         </Grid>
     </Border>

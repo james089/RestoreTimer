@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\App.xaml
-41618459849
+5-1465796791
 
-91315401926
+101343132011
 162057621854
-MainWindow.xaml;mControls\MoreButton.xaml;mControls\CloseButton.xaml;mControls\ProgressRing.xaml;
+MainWindow.xaml;mControls\MoreButton.xaml;mControls\CloseButton.xaml;mControls\ProgressRing.xaml;mControls\TimerSelector.xaml;
 
 False
 

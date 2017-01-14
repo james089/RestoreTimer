@@ -40,8 +40,7 @@ namespace RestoreTimer
             resetAll();
         }
 
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        private void TB_time_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
         }
@@ -98,7 +97,7 @@ namespace RestoreTimer
                 TB_time.Foreground =
                 progressRing.TValue.Foreground =
                 progressRing.TText.Foreground = Brushes.White;
-                TB_time.Text = (setTime - nowTime).ToString();
+                TB_time.Content = (setTime - nowTime).ToString();
             }  
             if (progressRing.Value > p.dyingLevel && progressRing.Value <= p.warningLevel)
             {
@@ -106,7 +105,7 @@ namespace RestoreTimer
                 TB_time.Foreground =
                 progressRing.TValue.Foreground = 
                 progressRing.TText.Foreground = Brushes.Yellow;
-                TB_time.Text = (setTime - nowTime).ToString();
+                TB_time.Content = (setTime - nowTime).ToString();
             }
             if (progressRing.Value > 0 && progressRing.Value <= p.dyingLevel)   //this time, time left is already 0;
             {
@@ -114,7 +113,7 @@ namespace RestoreTimer
                 TB_time.Foreground =
                 progressRing.TValue.Foreground =
                 progressRing.TText.Foreground = Brushes.Red;
-                TB_time.Text = (setTime - nowTime).ToString();
+                TB_time.Content = (setTime - nowTime).ToString();
             }
             leftValue = (int)engergyDecrease(fitAlg.gradient, nowValue);
             progressRing.Value = Convert.ToByte(leftValue);
@@ -162,7 +161,7 @@ namespace RestoreTimer
             TB_time.Foreground =
             progressRing.TValue.Foreground =
             progressRing.TText.Foreground = Brushes.White;
-            TB_time.Text = (nowTime).ToString();
+            TB_time.Content = (nowTime).ToString();
             progressRing.Value = Convert.ToByte(engergyIncrease(nowValue));
 
         }
@@ -189,7 +188,59 @@ namespace RestoreTimer
             if (timer != null)
                 timer.Tick -= Timer_Tick_restore;
             nowTime = new TimeSpan(0,0,0,0,0);
-            TB_time.Text = (nowTime).ToString();
+            TB_time.Content = (nowTime).ToString();
+        }
+
+        bool _mouseDown;
+        Point p0, p1;
+        double k0, k1, theta;
+        Point center = new Point(200, 200);
+
+
+        private void selector_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mouseDown = true;
+            p0 = Mouse.GetPosition(selector);
+            k0 = (p0.Y - center.Y) / (p0.X - center.X);
+            selector.Arrow.RenderTransform = new RotateTransform(0, center.X, center.Y);
+            selector.Text = "45 min";
+        }
+        /*
+        private bool mouseInArrow(Point p)
+        {
+            if (p.X > center.X - 15 && p.X < center.X + 15
+                && p.Y > center.Y * 2 - 20 && p.Y < center.Y * 2)
+                return true;
+            else
+                return false;
+        }
+        */
+        private void selector_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_mouseDown)
+            {
+                this.Cursor = Cursors.Hand;
+                p1 = Mouse.GetPosition(selector);
+                k1 = (p1.Y - center.Y) / (p1.X - center.X);
+                theta = Math.Atan((k1 - k0) / (1 + k0 * k1)) * 180 / Math.PI;
+                if (theta < 89 && theta > -89 )
+                {
+                    selector.Arrow.RenderTransform = new RotateTransform(theta, center.X, center.Y);
+                    selector.Text = (45 + theta * (35f / 90)).ToString("#") + " min";
+                }
+                else
+                    _mouseDown = false;
+            }
+        }
+
+        private void Window_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+            _mouseDown = false;
+            p0 = new Point();
+            p1 = new Point();
+            k0 = 0;
+            k1 = 0;
         }
 
     }

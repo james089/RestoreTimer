@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="RestoreTimer.mControls.TimerSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+             xmlns:local="clr-namespace:RestoreTimer.mControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="400">
+    <Viewbox>
+        <Grid>
+            <Ellipse StrokeThickness="60" Width="400" Height="400">
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE8E8E8" Offset="0"/>
+                        <GradientStop Color="#FF1D1D1D" Offset="1"/>
+                        <GradientStop Color="#FF636363" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+            </Ellipse>
+            <Ellipse StrokeThickness="30" Margin="60">
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF272727" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#FF6C6A6A" Offset="0.524"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+            </Ellipse>
+            <Ellipse StrokeThickness="20" Margin="60">
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF272727" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#FF6C6A6A" Offset="0.524"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+            </Ellipse>
+
+            <Grid x:Name="Arrow" >
+                <ed:RegularPolygon Panel.ZIndex="2" x:Name="indicator"  InnerRadius="1" Margin="0" PointCount="3" Stretch="Fill" Stroke="Red" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Height="20" Width="30" HorizontalAlignment="Center" Fill="Red" Canvas.Left="375.2" Canvas.Top="190">
+                </ed:RegularPolygon>
+            </Grid>
+                
+
+            <TextBlock x:Name="TText" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" Text="45 min" FontFamily="Segoe WP Light" Foreground="White" />
+        </Grid>
+    </Viewbox>
+</UserControl>
