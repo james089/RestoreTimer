@@ -70,3 +70,4 @@ c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTim
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.csproj.GenerateResource.Cache
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.exe
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.pdb
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.csprojResolveAssemblyReference.cache
