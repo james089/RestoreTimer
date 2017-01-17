@@ -50,13 +50,15 @@ namespace RestoreTimer.mControls
 
         private void Btn_down_Click(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.Time -= 5;
+            if (Properties.Settings.Default.Time > 5)
+                Properties.Settings.Default.Time -= 5;
             timeUpdate();
         }
 
         private void Btn_up_Click(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.Time += 5;
+            if (Properties.Settings.Default.Time < 200)
+                Properties.Settings.Default.Time += 5;
             timeUpdate();
         }
         /*

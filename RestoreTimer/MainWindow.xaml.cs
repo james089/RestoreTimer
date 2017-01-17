@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,6 +32,9 @@ namespace RestoreTimer
         int nowValue;                                       //Indicates how long you have been worked
         int leftValue;                                      // Left value (seconds) from last working period
         int elapsedValue;
+
+        SoundPlayer click_sound = new SoundPlayer(System.Environment.CurrentDirectory + @"\Res\camera-shutter-click-03.wav");
+        SoundPlayer redAlert_sound = new SoundPlayer(System.Environment.CurrentDirectory + @"\Res\redAlert.wav");
 
         public MainWindow()
         {
@@ -79,6 +83,7 @@ namespace RestoreTimer
 
         private void progressRing_CenterBtn_clicked(object sender, EventArgs e)
         {
+            click_sound.Play();
             if (progressRing.Value == 100 && mMode == mode.rest)                  //if not 100, you can't work!
             {
                 mMode = mode.work;
@@ -134,6 +139,7 @@ namespace RestoreTimer
             if (progressRing.Value > 0 && progressRing.Value <= p.dyingLevel)   //this time, time left is already 0;
             {
                 progressRing.Text = "Time to have a rest!\nClick to start a rest";
+                redAlert_sound.Play();
                 TB_time.Foreground =
                 progressRing.TValue.Foreground =
                 progressRing.TText.Foreground = Brushes.Red;

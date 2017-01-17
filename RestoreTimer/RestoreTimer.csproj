@@ -157,6 +157,12 @@
   <ItemGroup>
     <Resource Include="sonyericsson_timer_111px_1135486_easyicon.net.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Res\camera-shutter-click-03.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Res\redAlert.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
