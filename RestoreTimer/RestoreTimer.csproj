@@ -76,6 +76,9 @@
     <Compile Include="mControls\CloseButton.xaml.cs">
       <DependentUpon>CloseButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="mControls\TimerSelector2.xaml.cs">
+      <DependentUpon>TimerSelector2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="mControls\TimerSelector.xaml.cs">
       <DependentUpon>TimerSelector.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
     <Page Include="mControls\ProgressRing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="mControls\TimerSelector2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="mControls\TimerSelector.xaml">
       <SubType>Designer</SubType>

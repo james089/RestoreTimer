@@ -53,6 +53,7 @@ c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTim
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.csprojResolveAssemblyReference.cache
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\MainWindow.g.cs
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\MoreButton.g.cs
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\CloseButton.g.cs
@@ -72,3 +73,5 @@ c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTim
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.csproj.GenerateResource.Cache
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.exe
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\RestoreTimer.pdb
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\TimerSelector2.g.cs
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Debug\mControls\TimerSelector2.baml

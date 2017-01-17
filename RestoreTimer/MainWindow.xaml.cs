@@ -35,12 +35,12 @@ namespace RestoreTimer
         public MainWindow()
         {
             InitializeComponent();
-            focusSpanMinues = Properties.Settings.Default.Time;
             mMode = mode.rest;
             resetAll();
+            timeUpdate();
         }
 
-        private void TB_time_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
         }
@@ -48,6 +48,33 @@ namespace RestoreTimer
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        bool mainInterface = true;
+        private void moreButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (mainInterface)
+            {
+                timeSelector.Visibility = Visibility.Visible;
+                progressRing.Visibility = Visibility.Hidden;
+                timeSelector.timeUpdate();
+                mainInterface = false;
+            }
+            else
+            {
+                timeSelector.Visibility = Visibility.Hidden;
+                progressRing.Visibility = Visibility.Visible;
+                mainInterface = true;
+                timeUpdate();
+            }
+        }
+
+        private void timeUpdate()
+        {
+            focusSpanMinues = Properties.Settings.Default.Time;
+            setTime = new TimeSpan(0, 0, focusSpanMinues, 0, 0);
+            setValue = setTime.Minutes * 60;
+            TB_time.Content = (setTime).ToString();
         }
 
         private void progressRing_CenterBtn_clicked(object sender, EventArgs e)
@@ -75,9 +102,6 @@ namespace RestoreTimer
         #region drop energy
         private void decreaseEngergy()
         {
-            setTime = new TimeSpan(0, 0, 1, 0, 0); //new TimeSpan(0, 0, focusSpanMinues, 0, 0);
-            setValue = setTime.Minutes * 60;
-
             nowTime = new TimeSpan(0, 0, 0, 0, 0);
 
             timer = new DispatcherTimer();
@@ -191,11 +215,14 @@ namespace RestoreTimer
             TB_time.Content = (nowTime).ToString();
         }
 
+
+
+
+        /*
         bool _mouseDown;
         Point p0, p1;
         double k0, k1, theta;
         Point center = new Point(200, 200);
-
 
         private void selector_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -205,7 +232,6 @@ namespace RestoreTimer
             selector.Arrow.RenderTransform = new RotateTransform(0, center.X, center.Y);
             selector.Text = "45 min";
         }
-        /*
         private bool mouseInArrow(Point p)
         {
             if (p.X > center.X - 15 && p.X < center.X + 15
@@ -214,7 +240,6 @@ namespace RestoreTimer
             else
                 return false;
         }
-        */
         private void selector_MouseMove(object sender, MouseEventArgs e)
         {
             if (_mouseDown)
@@ -243,5 +268,6 @@ namespace RestoreTimer
             k1 = 0;
         }
 
+        */
     }
 }

@@ -42,7 +42,6 @@
                 </ed:RegularPolygon>
             </Grid>
                 
-
             <TextBlock x:Name="TText" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" Text="45 min" FontFamily="Segoe WP Light" Foreground="White" />
         </Grid>
     </Viewbox>
