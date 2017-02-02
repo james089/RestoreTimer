@@ -145,7 +145,7 @@ namespace RestoreTimer
                 progressRing.TText.Foreground = Brushes.Red;
                 TB_time.Content = (setTime - nowTime).ToString();
             }
-            leftValue = (int)engergyDecrease(fitAlg.gradient, nowValue);
+            leftValue = (int)engergyDecrease(fitAlg.linear, nowValue);
             progressRing.Value = Convert.ToByte(leftValue);
             elapsedValue = nowValue;
         }
@@ -156,7 +156,7 @@ namespace RestoreTimer
             switch (fit)
             {
                 case fitAlg.linear:
-                    result = ((double)100 / (double)setValue) * x;
+                    result = -((double)100 / (double)setValue) * x + 100;
                     if (result >= 0)
                         return result;
                     else

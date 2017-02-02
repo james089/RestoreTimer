@@ -77,3 +77,4 @@ c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTim
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Release\RestoreTimer.csprojResolveAssemblyReference.cache
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\obj\Release\RestoreTimer_Content.g.cs
 c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\bin\Release\Res\camera-shutter-click-03.wav
+c:\users\bojun.lin\documents\visual studio 2015\Projects\RestoreTimer\RestoreTimer\bin\Release\Res\redAlert.wav
